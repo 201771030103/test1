@@ -4,7 +4,7 @@
 #include<stdlib.h>
 #include<string.h>
  
- 
+
  
 struct stu_type{
 	char num[3000];
@@ -31,8 +31,9 @@ void save_txt();
 void load_txt();
 void save_bin();
 void load_bin();
-void main()//菜单选择 
+void main()
 {
+	//菜单选择 
 	while(1)
 	{
 		int choice;
@@ -71,8 +72,8 @@ void main()//菜单选择
 	}
  }
  
- 
-void add()增加学生信息 
+//增加学生信息 
+void add()
 {
 	int i=stu_num;
 	printf("说明：依次输入学生信息，当输入的学号为0时表示输入结束\n");
@@ -102,8 +103,8 @@ void add()增加学生信息
 	 printf("总共已输入%d个学生的信息\n",stu_num);
  }
  
- 
-void compute()统计信息 
+//统计信息 
+void compute()
 {
 	int i;
 	char n, m;
@@ -118,8 +119,9 @@ void compute()统计信息
 	printf("有异常总人数\t正常总人数\n");
 	printf("	%d	\t	%d\n",n,m); 
  }
- 
-void del()//删除学生信息 
+
+//删除学生信息 
+void del()
 {
 	char str[15], m;
 	int i, j;
@@ -140,7 +142,8 @@ void del()//删除学生信息
 	}
  }
  
-int display(char str[])//显示信息 
+//显示信息 
+int display(char str[])
 {
 	int i, k=-1;
 	if(strlen(str) == 0)
@@ -173,7 +176,8 @@ int display(char str[])//显示信息
 	return k;
 }
  
-void find()//查找某学生信息 
+//查找某学生信息 
+void find()
 {
 	char str[15];
 	printf("请输入要查找的学生学号：");
@@ -182,7 +186,8 @@ void find()//查找某学生信息
 	display(str);
  }
 
-void load_txt()//从文件中读取信息 
+//从文件中读取信息 
+void load_txt()
 {
 	FILE * fp;
 	char fname[20];
@@ -208,7 +213,9 @@ void load_txt()//从文件中读取信息
 	printf("从文件中成功读取%d条记录!\n",i);
 	fclose(fp); 
  }
-void modify()//修改学生信息 
+
+//修改学生信息
+void modify() 
 {
 	char str[15], m;
 	int i;
@@ -241,7 +248,9 @@ void modify()//修改学生信息
 		
 	 } 
 }
-void save_txt()//信息保存至文件中 
+
+//信息保存至文件中 
+void save_txt()
 {
 	FILE * fp;
 	char fname[20];
@@ -260,7 +269,8 @@ void save_txt()//信息保存至文件中
 	fclose(fp); 
  }
  
-void sort()//按学号排序 
+//按学号排序 
+void sort()
 {
 	int i,j;
 	struct stu_type temp;
